@@ -1,0 +1,6 @@
+.next
+**/coverage
+**/node_modules
+*.config.js
+.*rc.js
+*.setup.js

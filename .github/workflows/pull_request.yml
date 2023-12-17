@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  main:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.15.0'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+      - name: install dependencies from cache
+        run: npm ci
+      - name: run Prettier
+        run: npm run format
+      - name: run ESLint and Stylelint
+        run: npm run lint
+      - name: run Jest
+        run: npm run test:ci
+      - name: run TSC
+        run: npm run type

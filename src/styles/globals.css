@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*
+    nord colors
+    see https://www.nordtheme.com/docs/colors-and-palettes
+    */
+    --nord-0: 220 16% 22%;
+    --nord-1: 222 16% 28%;
+    --nord-2: 220 17% 32%;
+    --nord-3: 220 16% 36%;
+    --nord-4: 219 28% 88%;
+    --nord-5: 218 27% 92%;
+    --nord-6: 218 27% 94%;
+    --nord-7: 179 25% 65%;
+    --nord-8: 193 43% 67%;
+    --nord-9: 210 34% 63%;
+    --nord-10: 213 32% 52%;
+    --nord-11: 354 42% 56%;
+    --nord-12: 14 51% 63%;
+    --nord-13: 40 71% 73%;
+    --nord-14: 92 28% 65%;
+    --nord-15: 311 20% 63%;
+
+    /* custom site config */
+    --max-screen-width: 1280px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply font-notoSansJP text-sm md:text-base;
+  }
+}
